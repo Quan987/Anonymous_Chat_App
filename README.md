@@ -2,14 +2,21 @@
 
 
 
-<img src="screenshot/login.png" width="200" style="margin-right: 16px;"/>
+<!-- <img src="screenshot/login.png" width="200" style="margin-right: 16px;"/>
 <img src="screenshot/register.png" width="200" style="margin-right: 16px;"/>
 <img src="screenshot/home.png" width="200" style="margin-right: 16px;"/>
 <br>
 <img src="screenshot/chat.png" width="200" style="margin-right: 16px; margin-top: 12px;"/>
 <img src="screenshot/profile.png" width="200" style="margin-right: 16px; margin-top: 12px;"/>
 <img src="screenshot/setting.png" width="200" style="margin-right: 16px; margin-top: 12px;"/>
-<br>
+<br> -->
+![Login Screen](/screenshot/login.png)
+![Register Screen](/screenshot/register.png)
+![Home Screen](/screenshot/home.png)
+![Chat Screen](/screenshot/chat.png)
+![Profile Screen](/screenshot/profile.png)
+![Settings Screen](/screenshot/setting.png)
+
 
 ## Overview
 Welcome to the Chat App project repository! This Chat App project is developed using Flutter and incorporates Firestore for real-time database interactions and Firebase Authentication for user authentication. The app allows users to send and receive messages instantly, providing a seamless communication experience. By leveraging the Flutter framework, the app offers a responsive and intuitive user interface, making it accessible across multiple devices.
