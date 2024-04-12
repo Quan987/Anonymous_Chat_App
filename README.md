@@ -2,13 +2,13 @@
 
 
 
-<img src="screenshot/login.png" width="300" style="margin-right: 16px;"/>
-<img src="screenshot/register.png" width="300" style="margin-right: 16px;"/>
-<img src="screenshot/home.png" width="300" style="margin-right: 16px;"/>
+<img src="screenshot/login.png" width="200" style="margin-right: 16px;"/>
+<img src="screenshot/register.png" width="200" style="margin-right: 16px;"/>
+<img src="screenshot/home.png" width="200" style="margin-right: 16px;"/>
 <br>
-<img src="screenshot/chat.png" width="300" style="margin-right: 16px; margin-top: 12px;"/>
-<img src="screenshot/profile.png" width="300" style="margin-right: 16px; margin-top: 12px;"/>
-<img src="screenshot/setting.png" width="300" style="margin-right: 16px; margin-top: 12px;"/>
+<img src="screenshot/chat.png" width="200" style="margin-right: 16px; margin-top: 12px;"/>
+<img src="screenshot/profile.png" width="200" style="margin-right: 16px; margin-top: 12px;"/>
+<img src="screenshot/setting.png" width="200" style="margin-right: 16px; margin-top: 12px;"/>
 <br>
 
 ## Overview
