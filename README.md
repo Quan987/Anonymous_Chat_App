@@ -2,20 +2,20 @@
 
 
 
-<!-- <img src="screenshot/login.png" width="200" style="margin-right: 16px;"/>
-<img src="screenshot/register.png" width="200" style="margin-right: 16px;"/>
-<img src="screenshot/home.png" width="200" style="margin-right: 16px;"/>
+<img src="screenshot/login.png" width="200"/>
+<img src="screenshot/register.png" width="200"/>
+<img src="screenshot/home.png" width="200"/>
 <br>
-<img src="screenshot/chat.png" width="200" style="margin-right: 16px; margin-top: 12px;"/>
-<img src="screenshot/profile.png" width="200" style="margin-right: 16px; margin-top: 12px;"/>
-<img src="screenshot/setting.png" width="200" style="margin-right: 16px; margin-top: 12px;"/>
-<br> -->
-![Login Screen](/screenshot/login.png)
+<img src="screenshot/chat.png" width="200"/>
+<img src="screenshot/profile.png" width="200"/>
+<img src="screenshot/setting.png" width="200"/>
+<br> 
+<!--![Login Screen](/screenshot/login.png)
 ![Register Screen](/screenshot/register.png)
 ![Home Screen](/screenshot/home.png)
 ![Chat Screen](/screenshot/chat.png)
 ![Profile Screen](/screenshot/profile.png)
-![Settings Screen](/screenshot/setting.png)
+![Settings Screen](/screenshot/setting.png) -->
 
 
 ## Overview
