@@ -1,16 +1,12 @@
 # Annonymous Chat App
 
 
-<!--
-<img src="screenshot/login.png" width="200"/>
-<img src="screenshot/register.png" width="200"/>
-<img src="screenshot/home.png" width="200"/>
-<br>
-<img src="screenshot/chat.png" width="200"/>
-<img src="screenshot/profile.png" width="200"/>
-<img src="screenshot/setting.png" width="200"/>
-<br> 
--->
+
+<img src="screenshot/login.png" width="200"/> <img src="screenshot/register.png" width="200"/> <img src="screenshot/home.png" width="200"/>
+
+<img src="screenshot/chat.png" width="200"/> <img src="screenshot/profile.png" width="200"/> <img src="screenshot/setting.png" width="200"/>
+
+
 <!--![Login Screen](/screenshot/login.png)
 ![Register Screen](/screenshot/register.png)
 ![Home Screen](/screenshot/home.png)
@@ -18,9 +14,7 @@
 ![Profile Screen](/screenshot/profile.png)
 ![Settings Screen](/screenshot/setting.png) -->
 
-                                         |                                                |    
-:---------------------------------------:|:----------------------------------------------:|:--------------------------------------: 
- ![Login Screen](/screenshot/login.png)  |  ![Register Screen](/screenshot/register.png)  |  ![Home Screen](/screenshot/home.png)
+
 
 ## Overview
 Welcome to the Chat App project repository! This Chat App project is developed using Flutter and incorporates Firestore for real-time database interactions and Firebase Authentication for user authentication. The app allows users to send and receive messages instantly, providing a seamless communication experience. By leveraging the Flutter framework, the app offers a responsive and intuitive user interface, making it accessible across multiple devices.
