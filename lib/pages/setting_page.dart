@@ -48,18 +48,19 @@ class _SettingPageState extends State<SettingPage> {
   }
 
   void getUser() {
-    Stream<QuerySnapshot> usersStream = controller.getUsersCollection();
-    usersStream.listen((event) async {
-      for (var doc in event.docs) {
-        if (controller.getCurrentUserUid() == await doc.get("id")) {
-          displayFirstName = await doc.get("fname");
-          displayLastName = await doc.get("lname");
-          displayUserName = await doc.get("username");
-          email = await doc.get("email");
-          oldPassword = await doc.get("password");
-          setState(() {});
+    setState(() {
+      Stream<QuerySnapshot> usersStream = controller.getUsersCollection();
+      usersStream.listen((event) async {
+        for (var doc in event.docs) {
+          if (controller.getCurrentUserUid() == await doc.get("id")) {
+            displayFirstName = await doc.get("fname");
+            displayLastName = await doc.get("lname");
+            displayUserName = await doc.get("username");
+            email = await doc.get("email");
+            oldPassword = await doc.get("password");
+          }
         }
-      }
+      });
     });
   }
 
@@ -114,8 +115,10 @@ class _SettingPageState extends State<SettingPage> {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () {
-              controller.logout();
-              Navigator.of(context).pop();
+              setState(() {
+                controller.logout();
+                Navigator.of(context).pop();
+              });
             },
           ),
         ],

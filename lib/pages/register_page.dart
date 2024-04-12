@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:hw4/controllers/firebase_controller.dart';
 import 'package:hw4/pages/login_page.dart';
+import 'package:hw4/services/login_register_service.dart';
 import 'package:hw4/widgets/submit_button_widget.dart';
 import 'package:hw4/widgets/textfield_widget.dart';
 
-class RegisterPage extends StatelessWidget {
-  RegisterPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
+  @override
+  State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
   final TextEditingController _firstName = TextEditingController();
@@ -45,11 +51,13 @@ class RegisterPage extends StatelessWidget {
         password,
       );
       // ignore: use_build_context_synchronously
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => const LoginPage(),
-        ),
-      );
+      setState(() {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => const LoginRegisterService(),
+          ),
+        );
+      });
     } catch (e) {
       throw Exception(e);
     }

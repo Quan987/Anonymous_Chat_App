@@ -113,6 +113,7 @@ class FirebaseController {
         "time": timestamp,
         "message": message,
       });
+      return;
     });
   }
 

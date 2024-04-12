@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hw4/firebase_options.dart';
-import 'package:hw4/pages/splash_page.dart';
+import 'package:hw4/services/login_register_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Homework 4",
+      title: "Chat App",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           appBarTheme: AppBarTheme(
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         shadowColor: Colors.grey,
         foregroundColor: Colors.white,
       )),
-      home: SplashPage(),
+      home: const LoginRegisterService(),
     );
   }
 }
