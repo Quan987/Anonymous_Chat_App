@@ -2,9 +2,9 @@
 
 
 
-<img src="screenshot/login.png" width="200"/> <img src="screenshot/register.png" width="200"/> <img src="screenshot/home.png" width="200"/>
+<img src="screenshot/login.png" width="300"/> <img src="screenshot/register.png" width="300"/> <img src="screenshot/home.png" width="300"/>
 
-<img src="screenshot/chat.png" width="200"/> <img src="screenshot/profile.png" width="200"/> <img src="screenshot/setting.png" width="200"/>
+<img src="screenshot/chat.png" width="300"/> <img src="screenshot/profile.png" width="300"/> <img src="screenshot/setting.png" width="300"/>
 
 
 <!--![Login Screen](/screenshot/login.png)
