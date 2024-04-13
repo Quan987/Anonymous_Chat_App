@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:hw4/models/add_user_model.dart';
+import 'package:hw4/widgets/error_box_widget.dart';
 import 'package:intl/intl.dart';
 
 class FirebaseController {
@@ -28,16 +30,12 @@ class FirebaseController {
     return _db.collection("users").snapshots();
   }
 
-  // Login method
-  Future<void> loginController(String email, String password) async {
-    try {
-      await _auth.signInWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-    } on FirebaseAuthException catch (e) {
-      throw Exception(e.code);
-    }
+  FirebaseFirestore getDatabase() {
+    return _db;
+  }
+
+  FirebaseAuth getAuthentication() {
+    return _auth;
   }
 
   // Logout method

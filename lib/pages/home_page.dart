@@ -35,6 +35,16 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Message Board".toUpperCase()),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {
+              setState(() {
+                controller.logout();
+              });
+            },
+          ),
+        ],
       ),
       body: _isLoading
           ? const LoadingWidget()

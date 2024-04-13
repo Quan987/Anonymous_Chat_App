@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hw4/controllers/firebase_controller.dart';
 import 'package:hw4/pages/register_page.dart';
@@ -30,33 +31,19 @@ class _LoginPageState extends State<LoginPage> {
         ),
       );
     }
+
     try {
-      Stream<QuerySnapshot> snapshot = controller.getUsersCollection();
-      snapshot.listen((event) async {
-        bool isRegistered = false;
-        for (var doc in event.docs) {
-          if (email == doc.get("email") && password == doc.get("password")) {
-            await controller.loginController(email, password);
-            isRegistered = true;
-            break;
-          }
-        }
-        if (!isRegistered) {
-          showDialog(
-            context: context,
-            builder: (context) => const ErrorBox(
-              title: "Error User Not Found!",
-              description: "Please new account first",
-            ),
+      await controller.getAuthentication().signInWithEmailAndPassword(
+            email: email,
+            password: password,
           );
-        }
-      });
-    } on FirebaseException catch (e) {
-      showDialog(
+    } on FirebaseAuthException {
+      return showDialog(
+        // ignore: use_build_context_synchronously
         context: context,
-        builder: (context) => ErrorBox(
+        builder: (context) => const ErrorBox(
           title: "Error",
-          description: e.toString(),
+          description: "Please enter email and password correctly",
         ),
       );
     }
