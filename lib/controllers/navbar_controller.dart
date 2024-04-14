@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hw4/pages/group_chat_message_page.dart';
-import 'package:hw4/pages/home_page.dart';
 import 'package:hw4/pages/profile_page.dart';
 import 'package:hw4/pages/setting_page.dart';
 import 'package:hw4/widgets/nav_icon_widget.dart';

@@ -41,7 +41,15 @@ To run the Chat App on your local machine, follow these steps:
 
 3. **VSCode Extensions or Android Studio Plugins**: Flutter and Dart plugins for Android Studio or Visual Studio Code.
 
-### Steps
+### Steps (Recommended Method: Run via apk)
+
+1. **Download the app-release.apk**
+
+2. **Open an emulator or android/ios app**
+
+3. **Drag the apk to the emulator or devices to start application**
+
+### Steps (Run via files)
 
 1. **Clone the Repository**
    ```bash
