@@ -4,15 +4,11 @@
 
 <img src="screenshot/login.png" width="250"/> <img src="screenshot/register.png" width="250"/> <img src="screenshot/home.png" width="250"/>
 
-<img src="screenshot/chat.png" width="250"/> <img src="screenshot/profile.png" width="250"/> <img src="screenshot/setting.png" width="250"/>
+<img src="screenshot/chat.png" width="250"/> <img src="screenshot/chat-message.png" width="250"/> <img src="screenshot/chat-room.png" width="250"/>
+
+<img src="screenshot/profile.png" width="250"/> <img src="screenshot/setting.png" width="250"/>
 
 
-<!--![Login Screen](/screenshot/login.png)
-![Register Screen](/screenshot/register.png)
-![Home Screen](/screenshot/home.png)
-![Chat Screen](/screenshot/chat.png)
-![Profile Screen](/screenshot/profile.png)
-![Settings Screen](/screenshot/setting.png) -->
 
 
 
@@ -23,7 +19,7 @@ Welcome to the Chat App project repository! This Chat App project is developed u
 - Please note that this app is a demo and does not encompass all the features of a fully developed chat application. It's intended for demonstration purposes, illustrating basic functionalities such as user authentication and real-time messaging within a simplified framework.
 
 ## Project Proposal
-Chat App: A real-time messaging application allowing users to communicate with each other. The app supports authentication, real-time messaging, and is designed to be cross-platform, ensuring a consistent user experience across devices. The goal is to create a simple, user-friendly app that facilitates effortless communication.
+Chat App: A real-time messaging application allowing users to communicate with each other. The app supports authentication, real-time messaging, and is designed to be cross-platform, ensuring a consistent user experience across devices. Additionally, the app also supports chat room, where multiple users can chat together on a certain topic. The goal is to create a simple, user-friendly app that facilitates effortless communication.
 
 ## Tech Use
 - **Flutter**: An open-source UI software development kit created by Google.

@@ -1,8 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:hw4/models/add_user_model.dart';
-import 'package:hw4/widgets/error_box_widget.dart';
 import 'package:intl/intl.dart';
 
 class FirebaseController {
@@ -14,6 +12,14 @@ class FirebaseController {
   FirebaseController._privateConstructor();
   static final FirebaseController instance =
       FirebaseController._privateConstructor();
+
+  FirebaseFirestore getDatabase() {
+    return _db;
+  }
+
+  FirebaseAuth getAuthentication() {
+    return _auth;
+  }
 
   // Get user method
   User? getCurrentUser() {
@@ -30,14 +36,6 @@ class FirebaseController {
     return _db.collection("users").snapshots();
   }
 
-  FirebaseFirestore getDatabase() {
-    return _db;
-  }
-
-  FirebaseAuth getAuthentication() {
-    return _auth;
-  }
-
   // Logout method
   Future<void> logout() async {
     return await _auth.signOut();
@@ -52,7 +50,7 @@ class FirebaseController {
         password: password,
       );
 
-      final String currentUserId = getCurrentUser()!.uid;
+      final String currentUserId = _auth.currentUser!.uid;
       final String currentDate =
           DateFormat("yyyy-MM-dd").format(DateTime.now());
       AddUser newUser = AddUser(
@@ -79,13 +77,13 @@ class FirebaseController {
     }
   }
 
-  // Send Message Method
+  // Send Message Method Single User
   Future<void> sendMessage(String receiverID, String message) async {
     final Timestamp timestamp = Timestamp.now();
-    final String senderID = getCurrentUserUid();
+    final String senderID = _auth.currentUser!.uid;
     late String email;
     late String firstName;
-    Stream<QuerySnapshot> snapshot = getUsersCollection();
+    Stream<QuerySnapshot> snapshot = _db.collection("users").snapshots();
     snapshot.listen((event) async {
       for (var doc in event.docs) {
         if (senderID == await doc.get("id")) {
@@ -115,7 +113,7 @@ class FirebaseController {
     });
   }
 
-  // Get Message Method
+  // Get Message Method Single User
   Stream<QuerySnapshot> getMessage(String senderID, String receiverID) {
     List<String> chatID = [senderID, receiverID];
     chatID.sort();
@@ -123,6 +121,43 @@ class FirebaseController {
     return _db
         .collection("chatRoom")
         .doc(chatRoom)
+        .collection("messages")
+        .orderBy("time", descending: false)
+        .snapshots();
+  }
+
+  // Send Message Method Group
+  Future<void> sendGroupMessage(String roomType, String message) async {
+    final Timestamp timestamp = Timestamp.now();
+    final String senderId = _auth.currentUser!.uid;
+    late String firstName;
+    Stream<QuerySnapshot> snapshot = _db.collection("users").snapshots();
+    snapshot.listen((event) async {
+      for (var doc in event.docs) {
+        if (senderId == doc.get("id")) {
+          firstName = await doc.get("fname");
+          break;
+        }
+      }
+      await _db
+          .collection("groupChatRoom")
+          .doc(roomType)
+          .collection("messages")
+          .add({
+        "senderID": senderId,
+        "senderName": firstName,
+        "message": message,
+        "time": timestamp,
+      });
+      return;
+    });
+  }
+
+  // Get Message Method Group
+  Stream<QuerySnapshot> getGroupMessage(String roomType, String senderID) {
+    return _db
+        .collection("groupChatRoom")
+        .doc(roomType)
         .collection("messages")
         .orderBy("time", descending: false)
         .snapshots();

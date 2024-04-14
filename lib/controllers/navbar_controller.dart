@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hw4/pages/chatRoom_page.dart';
+import 'package:hw4/pages/group_chat_message_page.dart';
+import 'package:hw4/pages/home_page.dart';
 import 'package:hw4/pages/profile_page.dart';
 import 'package:hw4/pages/setting_page.dart';
 import 'package:hw4/widgets/nav_icon_widget.dart';
@@ -34,10 +35,11 @@ class NavBarController extends StatelessWidget {
             onTap: () => Navigator.of(context).pop(),
           ),
           NavIcon(
-            icon: Icons.settings,
+            icon: Icons.mark_unread_chat_alt,
             title: "Chat Room",
             onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const ChatRoomPage()),
+              MaterialPageRoute(
+                  builder: (context) => const GroupChatMessagePage()),
             ),
           ),
           NavIcon(

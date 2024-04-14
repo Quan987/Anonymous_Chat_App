@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hw4/controllers/firebase_controller.dart';
@@ -31,14 +30,13 @@ class _LoginPageState extends State<LoginPage> {
         ),
       );
     }
-
     try {
       await controller.getAuthentication().signInWithEmailAndPassword(
             email: email,
             password: password,
           );
     } on FirebaseAuthException {
-      return showDialog(
+      showDialog(
         // ignore: use_build_context_synchronously
         context: context,
         builder: (context) => const ErrorBox(
@@ -92,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                     InkWell(
                       onTap: () => Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
-                          builder: (context) => RegisterPage(),
+                          builder: (context) => const RegisterPage(),
                         ),
                       ),
                       child: Text(
