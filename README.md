@@ -53,7 +53,7 @@ To run the Chat App on your local machine, follow these steps:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Quan987/ChatApp.git
+   git clone https://github.com/Quan987/Anonymous_Chat_App.git
    ```
    
 2. **Navigate to the Project Directory**
